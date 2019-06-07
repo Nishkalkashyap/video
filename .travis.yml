@@ -3,6 +3,8 @@ dist: xenial
 language: node_js
 cache:
 - npm
+- directories:
+  - ./out
 notifications:
   email:
     on_success: never
