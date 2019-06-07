@@ -1,0 +1,24 @@
+{
+  "name": "videos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.17",
+    "@ffprobe-installer/ffprobe": "^1.0.12",
+    "@types/fluent-ffmpeg": "^2.1.9",
+    "@types/fs-extra": "^7.0.0",
+    "ffmpeg-concat": "^1.0.13",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^8.0.1",
+    "pixabay-api": "^1.0.4",
+    "ts-node": "^8.2.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.5.1"
+  }
+}
