@@ -3,8 +3,8 @@ import { videos, Video } from './videos';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
-// const ffmpeg_path = require('@ffmpeg-installer/ffmpeg').path;
-// const ffprobe_path = require('@ffprobe-installer/ffprobe').path;
+const ffmpeg_path = require('@ffmpeg-installer/ffmpeg').path;
+const ffprobe_path = require('@ffprobe-installer/ffprobe').path;
 
 root().catch(console.error);
 
@@ -28,9 +28,9 @@ async function convertVideo(vid: Video) {
             }
         });
 
-        // command
-            // .setFfmpegPath(ffmpeg_path)
-            // .setFfprobePath(ffprobe_path);
+        command
+            .setFfmpegPath(ffmpeg_path)
+            .setFfprobePath(ffprobe_path);
 
         vid.videos.map((val) => {
             const filename = path.basename(val);

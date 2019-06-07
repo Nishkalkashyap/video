@@ -21,13 +21,15 @@ matrix:
   include:
     - os: linux
       node_js: lts/*
+    - os: windows
+      node_js: lts/*
 
 install:
-  - sudo apt install aptitude
-  - sudo aptitude install debian-archive-keyring debian-multimedia-keyring 
-  - sudo apt update
+  # - sudo apt install aptitude
+  # - sudo aptitude install debian-archive-keyring debian-multimedia-keyring 
+  # - sudo apt update
 
-  - sudo apt install ffmpeg libmp3lame0
+  # - sudo apt install ffmpeg libmp3lame0
   - npm install
 
 script:
