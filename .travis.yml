@@ -11,6 +11,7 @@ notifications:
     on_failure: change
 
 matrix:
+  include:
     - os: osx
       node_js: lts/*
 
