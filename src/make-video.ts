@@ -21,7 +21,7 @@ async function root() {
     }
 
     const promises = videos.map(async (vid) => {
-        if (!fs.existsSync(vid.output) && needsVideoUpdate) {
+        if (!fs.existsSync(vid.output) || needsVideoUpdate) {
             return await convertVideo(vid);
         } else {
             console.log(`Build file ${vid.output} already exists.`);
