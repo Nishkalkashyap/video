@@ -1,12 +1,12 @@
 sudo: required
 dist: xenial
-addons:
-  apt:
-    packages:
-    - debian-archive-keyring
-    - debian-multimedia-keyring
-    - ffmpeg
-    - libmp3lame0
+# addons:
+#   apt:
+#     packages:
+#     - debian-archive-keyring
+#     - debian-multimedia-keyring
+#     - ffmpeg
+#     - libmp3lame0
 
 language: node_js
 cache: 
@@ -23,11 +23,11 @@ matrix:
       node_js: lts/*
 
 install:
-  # - sudo apt install aptitude
-  # - sudo aptitude install debian-archive-keyring debian-multimedia-keyring 
-  # - sudo apt update
+  - sudo apt install aptitude
+  - sudo aptitude install debian-archive-keyring debian-multimedia-keyring 
+  - sudo apt update
 
-  # - sudo apt install ffmpeg libmp3lame0
+  - sudo apt install ffmpeg libmp3lame0
   - npm install
 
 script:
