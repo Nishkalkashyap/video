@@ -2,23 +2,28 @@ import * as mpg from 'fluent-ffmpeg';
 import { videos, Video } from './videos';
 import * as fs from 'fs-extra';
 import * as path from 'path';
+import { execSync } from 'child_process';
 
 const ffmpeg_path = require('@ffmpeg-installer/ffmpeg').path;
 const ffprobe_path = require('@ffprobe-installer/ffprobe').path;
 
 root().catch(console.error);
 
-let needsVideoUpdate: boolean = false;
+let needsVideoUpdate: boolean = execSync('git --no-pager diff HEAD^ -U2000').toString().includes('make-video.ts');
+if (needsVideoUpdate) {
+    console.log(execSync('git --no-pager diff HEAD^ -U2000 ./src/make-video.ts').toString());
+}
+console.log(needsVideoUpdate);
 
 async function root() {
 
-    const currentFilePath = ('./src/make-video.ts');
-    const cachedFilePath = ('./src/make-video.txt');
-    const currentFile = fs.readFileSync(currentFilePath);
-    if (fs.readFileSync(cachedFilePath) != currentFile) {
-        fs.writeFileSync(cachedFilePath, currentFile);
-        needsVideoUpdate = true;
-    }
+    // const currentFilePath = ('./src/make-video.ts');
+    // const cachedFilePath = ('./src/make-video.txt');
+    // const currentFile = fs.readFileSync(currentFilePath);
+    // if (fs.readFileSync(cachedFilePath) != currentFile) {
+    //     fs.writeFileSync(cachedFilePath, currentFile);
+    //     needsVideoUpdate = true;
+    // }
 
     const promises = videos.map(async (vid) => {
         if (!fs.existsSync(vid.output) || needsVideoUpdate) {
