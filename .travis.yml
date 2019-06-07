@@ -5,6 +5,7 @@ cache:
 - npm
 - directories:
   - ./out
+  - ./temp
 notifications:
   email:
     on_success: never

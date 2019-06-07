@@ -11,6 +11,7 @@ async function fetchVideos() {
             const filepath = `./temp/${path.basename(vid)}`;
 
             if (fs.existsSync(filepath)) {
+                console.log(`File already exists: ${filepath}`);
                 return;
             }
 
