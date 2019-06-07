@@ -24,6 +24,7 @@ install:
 script:
   - npm run download
   - npm run convert
+  - npm run upload
 
 # deploy:
 #   overwrite: true
