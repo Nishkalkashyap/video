@@ -12,12 +12,15 @@ matrix:
   - os: osx
     osx_image: xcode10.2
     node_js: lts/*
-before_install:
-- openssl aes-256-cbc -K $encrypted_54fc707ebb3b_key -iv $encrypted_54fc707ebb3b_iv
-  -in cloud-storage-key.json.enc -out cloud-storage-key.json -d
+# before_install:
+# - openssl aes-256-cbc -K $encrypted_54fc707ebb3b_key -iv $encrypted_54fc707ebb3b_iv
+#   -in cloud-storage-key.json.enc -out cloud-storage-key.json -d
 install:
 - npm install
 script:
 - npm run download
 - npm run convert
-- npm run upload
+# - npm run upload
+# env:
+#   global:
+#     secure: Ux3ROfLHzsTB1CE+QVXx3+jFBM5u0FOqLK8lOHJYi2zmFpt2rJcRHpU9nSnGtTKTcu8YEcfgfLMADmHGM2pVrRw7Q+M7q8AibOpGB+mRBkdGsOICqzol5GvjqilQQ+ZXPLYwUnlKuvWUwS1AJIrYEbEDQnSxQh7kWOH6oH/PJRRhpCPtxUp3GpJJ8PpFMgfu2vNl0qJedFNTkKWRQi+hRhEkuZOGEQrNgq++3Gk2aTfuSQ8lAFGNsCWvOOAxdmQZbkO59NuI0145XLU3l5gfDpRsWP3Xiq3BQsolOMQHFpOtmCb8GeJHmvS154qBI1lTNaOufoxY3Sh3A5BeGiCh4SrblaGhWQ3TDSSKwHhExCO0YVXQDYcOH3TndD5k0ufvSZ35hvURZeTtTPuVl0rsqpUaNXfE8VV1XDbytHibuHgnjejmxaxO8g/fUpge0ncfEhiltO8ZitAIOqmioyWDjlKoZQ8mRpGnBqrlBBMFm2sNZwhZJWGbKi+23oSXBiFTA4bRyhrjlxWdPtIAg9jfT17zMb3Aaf7UtJ7Dk5kFrGiLwFi+SMAZXwvYafByt1rAT9CHEvpJr4GwUJnBhXlifWhNDHz7FtJ2KH5aIBmj89pIZWE7xjxrHH/T4QXj6ZN0S5AAcZlZ3GkWxqXXQ0WTDLYAghiKoyr61VCZIWyss+c=

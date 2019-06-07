@@ -9,13 +9,16 @@ export const videos: Video[] = [
             // './test-videos/settings.mp4',
             // './test-videos/terminal.mp4',
         ],
+        // credits: [
+        //     "Music: https://www.bensound.com"
+        // ],
         // videos: [
         //     './test-videos/extensible.mp4',
         //     './test-videos/introduction.mp4',
         //     './test-videos/settings.mp4',
         //     './test-videos/terminal.mp4',
         // ],
-        mp3: ''
+        mp3: './mp3/bensound-betterdays.mp3'
     }
 ]
 
