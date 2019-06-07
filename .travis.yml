@@ -16,8 +16,9 @@ matrix:
       node_js: lts/*
 
 install:
-  - sudo apt-get install debian-multimedia-keyring
-  - sudo apt-get update
+  # - sudo apt-get install debian-multimedia-keyring
+  # - sudo apt-get update
+  
   - sudo apt-get install ffmpeg libmp3lame0
   - npm install
 
