@@ -6,8 +6,11 @@ export const videos: Video[] = [
         videos: [
             'https://pixabay.com/videos/download/video-24105_small.mp4',
             'https://pixabay.com/videos/download/video-21116_medium.mp4',
-            // './test-videos/settings.mp4',
-            // './test-videos/terminal.mp4',
+            'https://pixabay.com/videos/download/video-15614_small.mp4',
+            'https://pixabay.com/videos/download/video-23232_small.mp4',
+            'https://pixabay.com/videos/download/video-22908_medium.mp4',
+            'https://pixabay.com/videos/download/video-6847_large.mp4',
+            'https://pixabay.com/videos/download/video-16459_large.mp4',
         ],
         // credits: [
         //     "Music: https://www.bensound.com"
