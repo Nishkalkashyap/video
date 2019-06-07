@@ -23,6 +23,7 @@ install:
 script:
 - npm run download
 - npm run convert
+- ls -la ./out
 # - npm run upload
 # env:
 #   global:
