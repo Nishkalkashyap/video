@@ -1,5 +1,5 @@
 sudo: required
-dist: xenial
+dist: trusty
 # addons:
 #   apt:
 #     packages:
@@ -21,6 +21,11 @@ matrix:
   include:
     - os: linux
       node_js: lts/*
+      env: CC=clang CXX=clang++ npm_config_clang=1
+      env:
+        - ELECTRON_CACHE=$HOME/.cache/electron
+        - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+      compiler: clang
     - os: windows
       node_js: lts/*
     - os: osx
