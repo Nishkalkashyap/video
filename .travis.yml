@@ -14,6 +14,8 @@ matrix:
   include:
     - os: osx
       node_js: lts/*
+    - os: windows
+      node_js: lts/*
 
 install:
   - npm install
