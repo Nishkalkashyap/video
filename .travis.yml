@@ -11,25 +11,10 @@ notifications:
     on_failure: change
 
 matrix:
-  # include:
-  #   - os: linux
-  #     node_js: lts/*
-  #     env: CC=clang CXX=clang++ npm_config_clang=1
-  #     env:
-  #       - ELECTRON_CACHE=$HOME/.cache/electron
-  #       - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
-  #     compiler: clang
-  #   - os: windows
-  #     node_js: lts/*
     - os: osx
       node_js: lts/*
 
 install:
-  # - sudo apt install aptitude
-  # - sudo aptitude install debian-archive-keyring debian-multimedia-keyring 
-  # - sudo apt update
-  # - sudo apt install ffmpeg libmp3lame0
-  
   - npm install
 
 script:
