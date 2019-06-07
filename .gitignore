@@ -82,3 +82,4 @@ typings/
 test-videos/
 temp/
 out/
+cloud-storage-key.json

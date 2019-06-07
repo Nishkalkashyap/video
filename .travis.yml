@@ -1,46 +1,22 @@
 sudo: required
 dist: xenial
-
 language: node_js
-cache: 
-  - npm
-
+cache:
+- npm
 notifications:
   email:
     on_success: never
     on_failure: change
-
 matrix:
   include:
-    - os: osx
-      node_js: lts/*
-
+  - os: osx
+    node_js: lts/*
 before_install:
-  - openssl aes-256-cbc -K $encrypted_54fc707ebb3b_key -iv $encrypted_54fc707ebb3b_iv -in cloud-storage-key.json.enc -out cloud-storage-key.json -d
-
+- openssl aes-256-cbc -K $encrypted_54fc707ebb3b_key -iv $encrypted_54fc707ebb3b_iv
+  -in cloud-storage-key.json.enc -out cloud-storage-key.json -d
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run download
-  - npm run convert
-  - npm run upload
-
-# deploy:
-#   overwrite: true
-#   provider: releases
-#   api_key: $GITHUB_TOKEN
-#   file_glob: true
-#   file: out/*
-#   skip_cleanup: true
-#   draft: true
-
-# deploy:
-#   provider: gcs
-#   access_key_id: GOOGW5SCWZHA42FT7THEI7TF
-#   secret_access_key:
-#     secure: BYb3QH4rddkbWUBSd48bfBPDnok4yf03QEaUtMcvUnm23VWpLXeR2nZuApVaU2ssKAXuvjtBhEeDZdrOr9jcvJD5UTzWNVBMrXA4X7eoHHbxz/6IO4Bk1GhziKARWn6RVxNMLxsBTCGAP1KwMHpRvg91fCRGJ5oB691MiGc8V+FQ0O4Kpeq2xDQSC8SHKvoXpx3eYeQq86e0me4HrLr+eUZmQ/IWaza0dFZvRteT7NgtnosCwRFoKatVyGjLj7Vke53WBPtQGuVPUatYvXLL2Ebz0vM1zWT1/kgyr/VqsaOZ2QCuekUUBMdkXLwnLPCjp2t3l+YHKyQI5SYdg457W9/c/WU0OeQnGvjRZ1855yduw6bDz3RH7uQ9KisgS04SfVsAJg/zOFlMQmOdtceIr38Az1SwdDQetz0vsewFSMf7HukRA/klWvbdopBXm8rWOC6cigxo0d0C+TfbMtBFGHYLyx/4JK0UB5kwhDxdI2sYa6ek6gX3yFhqgz1k1qsPBbpPX5qgvkrJ5F/SeJ5CA+6mXnDiouLnjEPAceBEQOySYL39eOSixqrJfAdxUJSFIe/Jph5qYV+rxHsGtcWOQPAXrBh9xjk+NnvPRWBt2YF9TeNs3ZowC8IJAlwdSnqyNXSkdg2BS1Q261x3uQsdUDRKApu1pfR1pvYBNRVPxPs=
-#   bucket: quarkjs-travis
-#   skip_cleanup: true
-#   acl: public-read
-#   local-dir: src
+- npm run download
+- npm run convert
+- npm run upload
