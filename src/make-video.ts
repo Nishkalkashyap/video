@@ -1,5 +1,4 @@
 import * as mpg from 'fluent-ffmpeg';
-import * as concat from 'ffmpeg-concat';
 import { videos, Video } from './videos';
 import * as fs from 'fs-extra';
 import * as path from 'path';
@@ -32,14 +31,14 @@ async function convertVideo(vid: Video) {
         command
             .setFfmpegPath(ffmpeg_path)
             .setFfprobePath(ffprobe_path)
-
-            // .withNoAudio()
-            .withOutputFormat('mp4')
-            .withAutoPad(true, '#ffffff');
+            .withOutputFormat('mp4');
 
         vid.videos.map((val) => {
-            command.addInput(val);
+            const filename = path.basename(val);
+            command.addInput(`./temp/${filename}`);
         });
+
+        fs.ensureFileSync(vid.output);
 
         command
             // .saveToFile(vid.output)
