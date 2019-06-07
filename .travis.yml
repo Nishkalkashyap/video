@@ -23,6 +23,8 @@ matrix:
       node_js: lts/*
     - os: windows
       node_js: lts/*
+    - os: osx
+      node_js: lts/*
 
 install:
   # - sudo apt install aptitude
