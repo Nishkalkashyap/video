@@ -18,9 +18,9 @@ matrix:
 install:
   - sudo apt install aptitude
   - sudo aptitude install debian-archive-keyring debian-multimedia-keyring 
-  - sudo apt-get update
+  - sudo apt update
 
-  - sudo apt-get install ffmpeg libmp3lame0
+  - sudo apt install ffmpeg libmp3lame0
   - npm install
 
 script:
