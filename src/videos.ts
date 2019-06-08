@@ -38,13 +38,13 @@ export const videos: Video[] = [
     {
         output: './out/creativeminds.mp4',
         videos: [
-            'https://pixabay.com/videos/download/video-4000_large.mp4?attachment',//16
-            'https://pixabay.com/videos/download/video-891_medium.mp4?attachment',//15
-            'https://pixabay.com/videos/download/video-896_medium.mp4?attachment',//24
-            'https://pixabay.com/videos/download/video-1367_large.mp4?attachment',//8
-            'https://pixabay.com/videos/download/video-12904_large.mp4?attachment',//10
-            'https://pixabay.com/videos/download/video-12911_large.mp4?attachment',//10
-            'https://pixabay.com/videos/download/video-13067_large.mp4?attachment',//20
+            'https://pixabay.com/videos/download/video-4000_large.mp4',//16
+            'https://pixabay.com/videos/download/video-891_medium.mp4',//15
+            'https://pixabay.com/videos/download/video-896_medium.mp4',//24
+            'https://pixabay.com/videos/download/video-1367_large.mp4',//8
+            'https://pixabay.com/videos/download/video-12904_large.mp4',//10
+            'https://pixabay.com/videos/download/video-12911_large.mp4',//10
+            'https://pixabay.com/videos/download/video-13067_large.mp4',//20
         ],
         mp3: './mp3/bensound-jazzyfrenchy.mp3'
     }

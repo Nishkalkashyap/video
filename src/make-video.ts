@@ -11,7 +11,7 @@ root().catch(console.error);
 
 let needsVideoUpdate: boolean = execSync('git --no-pager diff HEAD^ -U2000').toString().includes('make-video.ts');
 if (needsVideoUpdate) {
-    console.log(execSync('git --no-pager diff HEAD^ -U2000 ./src/make-video.ts').toString());
+    // console.log(execSync('git --no-pager diff HEAD^ -U2000 ./src/make-video.ts').toString());
 }
 console.log(needsVideoUpdate);
 
