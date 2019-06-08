@@ -64,7 +64,7 @@ async function convertVideo(vid: Video) {
             .withOutputFormat('mp4')
             .on('error', (e) => {
                 resolve(true);
-                console.log(`Cannot process: ${e}`);
+                throw Error(`Cannot process: ${e}`);
             })
             .on('end', (e) => {
                 addAudio(vid).then(() => {
@@ -112,7 +112,7 @@ async function addAudio(vid: Video) {
             .saveToFile(vid.output)
             .on('error', (e) => {
                 resolve(true);
-                console.log(`Cannot process: ${e}`);
+                throw Error(`Cannot process: ${e}`);
             })
             .on('end', (e) => {
                 resolve(true);
