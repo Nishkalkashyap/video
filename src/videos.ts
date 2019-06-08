@@ -45,6 +45,9 @@ export const videos: Video[] = [
             'https://pixabay.com/videos/download/video-12904_large.mp4',//10
             'https://pixabay.com/videos/download/video-12911_large.mp4',//10
             'https://pixabay.com/videos/download/video-13067_large.mp4',//20
+            'https://pixabay.com/videos/download/video-13067_large.mp4',//20
+            'https://pixabay.com/videos/download/video-13067_large.mp4',//20
+            'https://pixabay.com/videos/download/video-13067_large.mp4',//20
         ],
         mp3: './mp3/bensound-jazzyfrenchy.mp3'
     }
