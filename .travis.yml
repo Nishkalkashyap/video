@@ -24,6 +24,7 @@ script:
 - npm run download
 - npm run convert
 - ls -la ./out
+- ls -la ./temp
 # - npm run upload
 # env:
 #   global:
